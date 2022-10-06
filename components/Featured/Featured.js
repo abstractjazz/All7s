@@ -75,7 +75,7 @@ export default function Featured() {
           <h2 className="text-3xl font-bold tracking-tight text-white">All 7s Highights</h2>
           <p className="mt-4 text-lg text-purple-700 font-bold text-3xl">
             @Roderick, I was thinking this could be less like a portfolio & more like a playground with 3-5 highlights on it from each section of the site. Like on song, one music video, one piece of merch, one blog post or headline.
-            Plus I'm thinking a good place for a simple interaction someone could play with. What you think?
+            Plus it feels like a good place for a simple interaction someone could play with. What you think?
           </p>
         </div>
         <div className="mt-12 space-y-10 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-4 lg:gap-x-8">

@@ -53,7 +53,7 @@ const posts = [
           <div>
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Blog</h2>
             <div className="mt-3 sm:mt-4 lg:grid lg:grid-cols-2 lg:items-center lg:gap-5">
-              <p className="text-xl text-gray-500">Get updates when we send 'em.</p>
+              <p className="text-xl text-gray-500">Get updates when we send them.</p>
               <form className="mt-6 flex flex-col sm:flex-row lg:mt-0 lg:justify-end">
                 <div>
                   <label htmlFor="email-address" className="sr-only">
