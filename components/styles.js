@@ -1,4 +1,4 @@
-export const StylesObj = {
+export default {
     container:[ 
         'bg-pink-500'
     ].join(' ')
