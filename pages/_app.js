@@ -17,6 +17,7 @@ function MyApp({ Component, pageProps }) {
        <meta property="og:description" content="Explore the All 7z Brand. West Coast Music, Lifestyle, Merch"/>
        <meta property="twitter:title" content="All 7z: Music, Lifestyle, Merch"/>
        <meta property="twitter:description" content="Explore the All 7z Brand. West Coast Music, Lifestyle, Merch"/>
+      
   </Head>
   <Layout>
       <Component {...pageProps} />

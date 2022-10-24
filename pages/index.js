@@ -12,9 +12,9 @@ export default function Home() {
     
     <div className={StylesObj.container}>
       <Splash/>
-      <About/>
-      <Featured/>
-      <Contact/>
+      { <About/>
+     /* <Featured/>
+      <Contact/> */}
       {/* <h1>Landing | About | Highlights, like feature track, new release, news, new merch, etc...</h1> */}
     </div>
   )

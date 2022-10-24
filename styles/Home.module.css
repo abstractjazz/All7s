@@ -1,3 +1,5 @@
+@import url("https://use.typekit.net/xiv3wpa.css");
+
 .container {
   padding: 0 2rem;
 }
@@ -9,7 +11,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center;  
 }
 
 .footer {
