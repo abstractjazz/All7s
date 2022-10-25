@@ -6,16 +6,18 @@ import Splash from '../components/Splash'
 import About from '../components/About'
 import Featured from '../components/Featured'
 import Contact from '../components/Contact'
+import MusicAndVideo from '../components/MusicAndVideo'
 
 export default function Home() {
   return (
     
     <div className={StylesObj.container}>
       <Splash/>
-      { <About/>
-     /* <Featured/>
-      <Contact/> */}
-      {/* <h1>Landing | About | Highlights, like feature track, new release, news, new merch, etc...</h1> */}
+       <About/>
+      <MusicAndVideo/>
+      {/* <Featured/>
+      <Contact/>  */}
+       {/* <h1>Landing | About | Highlights, like feature track, new release, news, new merch, etc...</h1>  */}
     </div>
   )
 }
