@@ -33,13 +33,14 @@ export default function Splash() {
   }
 
   return (
-      <div style={{width: '100vw', height: '100vh', position:'relative'}}>
+      <div style={{display:'flex', flexDirection:'column', justifyContent: 'center'}}>
         <Image
           alt="huge block letters 'S T A K' with an image of the rapper STAK inside of them"
-          src="https://ik.imagekit.io/a9ltbtydo/stak-images/stak/images/Stak-main-feature(2560x1600).png"
-          layout='fill'
-          objectFit='cover'
-         
+          src="https://ik.imagekit.io/a9ltbtydo/stak-images/stak/images/Stak-main-feature-(25x16).png"
+          // layout='responsive'
+          width={1440}
+          height={900}
+          // objectFit='cover'
         />
          <div className="absolute top-0 w-screen h-auto px-12 z-50">
           <div className="flex flex-row justify-end gap-x-4">

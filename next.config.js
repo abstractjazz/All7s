@@ -7,7 +7,6 @@ const nextConfig = {
       {
         protocol:'https',
         hostname:'ik.imagekit.io',
-        port:'',
       }
     ],
     domains: ['ik.imagekit.io'],
