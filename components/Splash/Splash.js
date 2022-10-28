@@ -1,4 +1,4 @@
-import { Fragment, useEffect } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import {
   Bars3Icon,
@@ -17,37 +17,59 @@ import Image from 'next/image'
 
 
 export default function Splash() {
+  
 
+  useEffect(()=> {
+    window.scrollTo(140, 140)
+  })
 
   useEffect(()=> {
     anime({
-      targets: '.headline',
-      rotate: '1turn',
-      duration: 800
+      targets: '#focus-mask',
+      opacity: 0,
+      translateY: -30,
+      translateX:3,
+      translateX:-5,
+      duration: 7000,
+      easing: 'easeOutQuad'
     })
   })
 
-  const styles = {
-    width:  500,
-    height: 500
-  }
+ 
+
+
+
+
+
+    
+   
+   
+
+  // const styles = {
+  //   width:  500,
+  //   height: 500
+  // }
+  // style={{display:'flex', flexDirection:'column', alignItems: 'center', alignContent:'center'}}
 
   return (
-      <div style={{display:'flex', flexDirection:'column', justifyContent: 'center'}}>
+      <div className="w-full h-auto scroll-smooth">
         <Image
           alt="huge block letters 'S T A K' with an image of the rapper STAK inside of them"
           src="https://ik.imagekit.io/a9ltbtydo/stak-images/stak/images/Stak-main-feature-(25x16).png"
-          // layout='responsive'
-          width={1440}
-          height={900}
-          // objectFit='cover'
+          layout='responsive'
+          width={2560}
+          height={1600}
+          objectFit='cover'
         />
-         <div className="absolute top-0 w-screen h-auto px-12 z-50">
-          <div className="flex flex-row justify-end gap-x-4">
-          <h1>About</h1>
-          <h1>About</h1>
-          <h1>About</h1>
-          </div>
+        <div className="bg-black absolute top-5 w-screen h-screen opacity-40 " id="focus-mask">
+        <Image
+          alt="huge block letters 'S T A K' with an image of the rapper STAK inside of them"
+          src="https://ik.imagekit.io/a9ltbtydo/stak-images/stak/images/Stak-main-feature-(25x16).png"
+          layout='responsive'
+          width={2560}
+          height={1600}
+          objectFit="cover"
+        />
         </div>
       </div>
   )
