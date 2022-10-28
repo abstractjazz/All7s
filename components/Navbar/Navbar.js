@@ -28,11 +28,12 @@ useEffect(()=>{
 })
 
 return(
-<nav className="fixed top-0 w-screen h-auto px-12 z-50" id="nav">
+<nav className="fixed top-0 w-screen h-auto px-12 z-50 font-Headline text-gray-100/70" id="nav">
           <div className="flex flex-row justify-end gap-x-4">
-          <h1>About</h1>
-          <h1>About</h1>
-          <h1>About</h1>
+          <h1>About All7s</h1>
+          <h1>Music & Video</h1>
+          <h1>Shop</h1>
+          <h1>Blog</h1>
           </div>
         </nav>
     )
