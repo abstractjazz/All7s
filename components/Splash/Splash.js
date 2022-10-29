@@ -20,7 +20,7 @@ export default function Splash() {
   
 
   useEffect(()=> {
-    window.scrollTo(140, 140)
+    window.scrollTo(95, 95)
   })
 
   useEffect(()=> {
