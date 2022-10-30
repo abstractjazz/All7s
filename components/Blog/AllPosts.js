@@ -12,48 +12,53 @@
   }
   ```
 */
-const posts = [
-    {
-      title: 'Look Both Ways',
-      href: '#',
-      description:
-        'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-      date: 'Mar 16, 2020',
-      datetime: '2020-03-16',
-    },
-    {
-      title: 'Tour Biz',
-      href: '#',
-      description: 'Optio cum necessitatibus dolor voluptatum provident commodi et. Qui aperiam fugiat nemo cumque.',
-      date: 'Mar 10, 2020',
-      datetime: '2020-03-10',
-    },
-    {
-      title: 'Up in Smoke',
-      href: '#',
-      description:
-        'Cupiditate maiores ullam eveniet adipisci in doloribus nulla minus. Voluptas iusto libero adipisci rem et corporis.',
-      date: 'Feb 12, 2020',
-      datetime: '2020-02-12',
-    },
-    {
-      title: 'Watch your 7',
-      href: '#',
-      description:
-        'Ipsum voluptates quia doloremque culpa qui eius. Id qui id officia molestias quaerat deleniti. Qui facere numquam autem libero quae cupiditate asperiores vitae cupiditate. Cumque id deleniti explicabo.',
-      date: 'Jan 29, 2020',
-      datetime: '2020-01-29',
-    },
-  ]
+
+import { client } from '../../lib/client';
+
+// const posts = [
+//     {
+//       title: 'Look Both Ways',
+//       href: '#',
+//       description:
+//         'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+//       date: 'Mar 16, 2020',
+//       datetime: '2020-03-16',
+//     },
+//     {
+//       title: 'Tour Biz',
+//       href: '#',
+//       description: 'Optio cum necessitatibus dolor voluptatum provident commodi et. Qui aperiam fugiat nemo cumque.',
+//       date: 'Mar 10, 2020',
+//       datetime: '2020-03-10',
+//     },
+//     {
+//       title: 'Up in Smoke',
+//       href: '#',
+//       description:
+//         'Cupiditate maiores ullam eveniet adipisci in doloribus nulla minus. Voluptas iusto libero adipisci rem et corporis.',
+//       date: 'Feb 12, 2020',
+//       datetime: '2020-02-12',
+//     },
+//     {
+//       title: 'Watch your 7',
+//       href: '#',
+//       description:
+//         'Ipsum voluptates quia doloremque culpa qui eius. Id qui id officia molestias quaerat deleniti. Qui facere numquam autem libero quae cupiditate asperiores vitae cupiditate. Cumque id deleniti explicabo.',
+//       date: 'Jan 29, 2020',
+//       datetime: '2020-01-29',
+//     },
+//   ]
   
-  export default function Writing() {
+  const AllPosts=({postInfo})=> {
     return (
+      
       <div className="bg-white px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-24 lg:pb-28">
+       
         <div className="relative mx-auto max-w-lg divide-y-2 divide-gray-200 lg:max-w-7xl">
           <div>
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Blog</h2>
             <div className="mt-3 sm:mt-4 lg:grid lg:grid-cols-2 lg:items-center lg:gap-5">
-              <p className="text-xl text-gray-500">Get updates when we send them.</p>
+              <p className="text-xl text-gray-500"></p>
               <form className="mt-6 flex flex-col sm:flex-row lg:mt-0 lg:justify-end">
                 <div>
                   <label htmlFor="email-address" className="sr-only">
@@ -81,10 +86,10 @@ const posts = [
             </div>
           </div>
           <div className="mt-6 grid gap-16 pt-10 lg:grid-cols-2 lg:gap-x-5 lg:gap-y-12">
-            {posts.map((post) => (
+            {postInfo.map((post) => (
               <div key={post.title}>
                 <p className="text-sm text-gray-500">
-                  <time dateTime={post.datetime}>{post.date}</time>
+                 
                 </p>
                 <a href="#" className="mt-2 block">
                   <p className="text-xl font-semibold text-gray-900">{post.title}</p>
@@ -102,4 +107,7 @@ const posts = [
       </div>
     )
   }
+  
+  export default AllPosts
+  
   

@@ -1,1 +1,1 @@
-export { default } from './Writing'
+export { default } from './AllPosts'

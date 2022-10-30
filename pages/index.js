@@ -7,10 +7,12 @@ import About from '../components/About'
 import Featured from '../components/Featured'
 import Contact from '../components/Contact'
 import MusicAndVideo from '../components/MusicAndVideo'
+import client from '../lib/client'
 
 export default function Home() {
+  
   return (
-    
+
     <div className={StylesObj.container}>
       <Splash/>
        <About/>
@@ -19,5 +21,6 @@ export default function Home() {
       <Contact/>  */}
        {/* <h1>Landing | About | Highlights, like feature track, new release, news, new merch, etc...</h1>  */}
     </div>
-  )
+  ) 
 }
+
