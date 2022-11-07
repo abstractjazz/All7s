@@ -12,6 +12,7 @@
     "@ecwid/nextjs-ecwid-plugin": "^0.1.1",
     "@headlessui/react": "^1.7.3",
     "@heroicons/react": "^2.0.11",
+    "@portabletext/react": "^2.0.0",
     "@sanity/client": "^3.4.1",
     "@sanity/image-url": "^1.0.1",
     "animejs": "^3.2.1",

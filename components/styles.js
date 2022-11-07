@@ -1,6 +1,5 @@
 export default {
-    container:[ 
-     
+    container:[   
     ].join(' ')
 }
 

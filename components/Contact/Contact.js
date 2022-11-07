@@ -12,8 +12,17 @@
   }
   ```
 */
-export default function Example() {
+export default function Contact() {
+  
     return (
+      <>
+        <Image
+        alt="huge block letters 'S T A K' with an image of the rapper STAK inside of them"
+        src="https://ik.imagekit.io/a9ltbtydo/stak-images/stak/images/Stak-music-&-video-2.png"
+        layout="responsive"
+        width={1440}
+        height={900}
+      />
       <div className="bg-gray-800">
         <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:py-16 lg:px-8">
           <div className="lg:w-0 lg:flex-1">
@@ -57,6 +66,7 @@ export default function Example() {
           </div>
         </div>
       </div>
+      </>
     )
   }
   

@@ -4,16 +4,15 @@ import Image from 'next/image'
 
 export default function MusicAndVideo() {
 return (
-    <div className="">
-        <Image
-          alt="huge block letters 'S T A K' with an image of the rapper STAK inside of them"
-          src="https://ik.imagekit.io/a9ltbtydo/stak-images/stak/images/Stak-music-&-video-2.png"
-          width={1440}
-          height={900}
-        />
-        {/* <Video/>
-        <Music/> */}
-    </div>
+    <>
+       <div className="absolute w-screen h-screen bg-gray-200/0 z-20"> 
+        <div className="w-full h-full flex items-center text-9xl overflow-hidden">
+       <video src="https://ik.imagekit.io/a9ltbtydo/stak-images/stak/images/smoke-transition-bg.mp4" muted autoPlay></video>
+        </div>
+        </div>
+        <Video/>
+        {/* <Music/> */}
+    </>
 
     )
 }

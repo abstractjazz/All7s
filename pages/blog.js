@@ -6,6 +6,7 @@ export default function Blog(allPosts) {
      
       <div className="">
        <AllPosts postInfo = {allPosts.allPosts}/>
+       {/* //passes the array of objects to the allPost component */}
       </div>
     )
   }
@@ -13,6 +14,7 @@ export default function Blog(allPosts) {
   export const getServerSideProps = async () => {
       const query = '*[_type == "post"]'
       const allPosts = await client.fetch(query)
+      //returns object with an array of objects in it
       return {
         props: {
           allPosts
