@@ -15,6 +15,7 @@
 
 import { client } from '../../lib/client';
 import {PortableText} from '@portabletext/react'
+import Link from 'next/link'
 
 // const posts = [
 //     {
@@ -74,16 +75,17 @@ import {PortableText} from '@portabletext/react'
           </div>
           <div className="mt-6 grid gap-16 pt-10 lg:grid-cols-2 lg:gap-x-5 lg:gap-y-12">
             {postInfo.map((post) => (
+            
               <div key={post.title}>
-                <PortableText blocks={post.body}/>
+              
+                <p className="text-sm text-white"></p>
                 <a href="#" className="mt-2 block">
                   <p className="text-xl font-semibold white">{post.title}</p>
-                  
                 </a>
                 <div className="mt-3">
-                  <a href={post.href} className="text-base font-semibold text-indigo-600 hover:text-indigo-500">
+                  <Link href={'/blog/'+ post.title.split(" ").join("-")} key={post.id} className="text-base font-semibold text-indigo-600 hover:text-indigo-500">
                     Read full story
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}

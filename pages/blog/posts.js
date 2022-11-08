@@ -1,11 +1,12 @@
-import AllPosts from '../components/Blog'
-import { client } from '../lib/client'
+import AllPosts from '../../components/Blog'
+import { client } from '../../lib/client'
 
 export default function Blog(allPosts) {
     return (
      
       <div className="">
-       <AllPosts postInfo = {allPosts.allPosts}/>
+       <AllPosts postInfo = {allPosts.allPosts} />
+      
        {/* //passes the array of objects to the allPost component */}
       </div>
     )
@@ -13,11 +14,16 @@ export default function Blog(allPosts) {
   
   export const getServerSideProps = async () => {
       const query = '*[_type == "post"]'
+      const query2 = '*[_type == "post"].slug.current'
+    
       const allPosts = await client.fetch(query)
+     
+      
       //returns object with an array of objects in it
       return {
         props: {
-          allPosts
+          allPosts,
+         
         }
       }
     }
