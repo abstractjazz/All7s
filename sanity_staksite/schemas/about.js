@@ -4,9 +4,18 @@ export default {
     type: 'document',
     fields: [
        {
+        name: 'title',
+        title: 'Title',
+        type: 'string',
+       },
+       
+       {
         name: 'body',
         title: 'Body',
-        type: 'blockContent',
+        type: 'array',
+        of: [{type: 'block'}]
+       },
+       
         // of: [
         //     {
         //         type: 'block', 
@@ -17,7 +26,12 @@ export default {
         //         }
         //     }
         // ]
-       },
     
-    ]
+    
+    ],
+    preview: {
+        select: {
+          title: 'title',
+        },
+    }
 }

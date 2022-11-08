@@ -69,13 +69,13 @@ const features = [
 const css = { maxWidth: '100%', height: 'auto' }
 export default function Music() {
   return (
-    <div className="bg-black">
+    <div className="bg-black/0">
       <div className="mx-auto max-w-7xl py-16 px-4 sm:px-6 lg:py-24 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white">Latest Music</h2>
 
         </div>
-        <div className="mt-12 space-y-10 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-4 lg:gap-x-8">
+        <div className="mt-12 space-y-10 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8 ">
           {features.map((feature) => (
             <div key={feature.name} className="relative border-solid border-white border">
             <Image
