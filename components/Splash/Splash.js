@@ -27,10 +27,9 @@ export default function Splash() {
     anime({
       targets: '#focus-mask',
       opacity: 0,
-      translateY: -30,
-      translateX:3,
-      translateX:-5,
-      duration: 7000,
+      translateY: -120,
+      // translateX:-20,
+      duration: 1500,
       easing: 'easeOutQuad'
     })
   })
@@ -61,7 +60,7 @@ export default function Splash() {
           height={1600}
           objectFit='cover'
         />
-        <div className="bg-black absolute top-5 w-screen h-screen opacity-40 " id="focus-mask">
+        <div className="bg-black absolute top-5 w-screen h-screen opacity-40" id="focus-mask">
         <Image
           alt="huge block letters 'S T A K' with an image of the rapper STAK inside of them"
           src="https://ik.imagekit.io/a9ltbtydo/stak-images/stak/images/Stak-main-feature-(25x16).png"

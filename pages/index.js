@@ -27,7 +27,7 @@ export default function Home(aboutCopy) {
   ) 
 }
 export const getServerSideProps = async() => {
-const query = "*[_type == 'about']" //is this the wrong query & why I am not getting the expected results? 
+const query = `*[_type == 'about']` //is this the wrong query & why I am not getting the expected results? the return differs from a simple copy of the json 
 const aboutCopy = await client.fetch(query)
 return {
  props: {
