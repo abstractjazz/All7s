@@ -18,7 +18,6 @@ import Image from 'next/image'
 
 export default function Splash() {
   
-
   useEffect(()=> {
     window.scrollTo(95, 95)
   })

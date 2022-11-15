@@ -27,7 +27,9 @@ export default {
         {title: 'H3', value: 'h3'},
         {title: 'H4', value: 'h4'},
         {title: 'Quote', value: 'blockquote'},
+     
       ],
+
       lists: [{title: 'Bullet', value: 'bullet'}],
       // Marks let you mark up inline text in the block editor.
       marks: {
@@ -52,11 +54,7 @@ export default {
             ],
 
           },
-          {
-            name: 'color',
-             title: 'Color', 
-             type: 'color'
-          },
+  
         ],
       },
     },
@@ -68,5 +66,8 @@ export default {
       type: 'image',
       options: {hotspot: true},
     },
+    {
+      type: 'youtube'
+    }
   ],
 }

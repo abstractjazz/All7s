@@ -31,6 +31,7 @@ export default {
         hotspot: true,
       },
     },
+
     {
       name: 'categories',
       title: 'Categories',

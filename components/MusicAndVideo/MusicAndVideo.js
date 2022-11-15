@@ -125,12 +125,14 @@ document.addEventListener("visibilitychange", onVisibilityChange);
 
 return (
     <>
- 
-    <video className="vid sticky top-0 w-screen h-screen" src="https://ik.imagekit.io/a9ltbtydo/stak-images/stak/images/smoke-transition-bg.mp4" muted></video>
   
-       <div className="parallax-container w-full h-full bg-green-200/0 z-2"> 
-      
-         <div className="grid-container px-12 mt-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-6">
+    <video className="vid sticky top-0 w-screen h-screen" src="https://ik.imagekit.io/a9ltbtydo/stak-images/stak/images/smoke-transition-bg.mp4" muted></video>
+    <audio className="w-screen">
+      <source src="https://cdn.sanity.io/files/1gxdk71x/production/2a170f1a2f45f06c44c614e3e1bfeb104a6cd352.mp3" type="audio/mpeg"></source>
+    </audio>
+       <div className="parallax-container items-center w-full h-full bg-green-200/0 z-2"> 
+        
+         <div className="grid-container px-12 mt-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3">
           {features.map((feature) => (
             <div key={feature.name} className="">
             <Image
