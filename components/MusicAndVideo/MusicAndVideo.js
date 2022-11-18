@@ -19,93 +19,10 @@ import { urlFor } from '../../lib/client'
 //   }
 // }
 
-const features = [
-    {
-      name: 'One',
-      description: 'Tempor tellus in aliquet eu et sit nulla tellus. Suspendisse est, molestie blandit quis ac. Lacus.',
-      image: '/background.jpg'
-    },
-    {
-      name: 'Two',
-      description: 'Ornare donec rhoncus vitae nisl velit, neque, mauris dictum duis. Nibh urna non parturient.',
-      image: '/background.jpg'
-    },
-    {
-      name: 'Three',
-      description: 'Tempor tellus in aliquet eu et sit nulla tellus. Suspendisse est, molestie blandit quis ac. Lacus.',
-      image: '/background.jpg'
-    },
-    {
-      name: 'Four',
-      description: 'Ornare donec rhoncus vitae nisl velit, neque, mauris dictum duis. Nibh urna non parturient.',
-      image: '/background.jpg'
-    },
-    {
-        name: 'One',
-        description: 'Tempor tellus in aliquet eu et sit nulla tellus. Suspendisse est, molestie blandit quis ac. Lacus.',
-        image: '/background.jpg'
-      },
-      {
-        name: 'Two',
-        description: 'Ornare donec rhoncus vitae nisl velit, neque, mauris dictum duis. Nibh urna non parturient.',
-        image: '/background.jpg'
-      },
-      {
-        name: 'Three',
-        description: 'Tempor tellus in aliquet eu et sit nulla tellus. Suspendisse est, molestie blandit quis ac. Lacus.',
-        image: '/background.jpg'
-      },
-      {
-        name: 'Four',
-        description: 'Ornare donec rhoncus vitae nisl velit, neque, mauris dictum duis. Nibh urna non parturient.',
-        image: '/background.jpg'
-      },
-      {
-        name: 'One-2',
-        description: 'Tempor tellus in aliquet eu et sit nulla tellus. Suspendisse est, molestie blandit quis ac. Lacus.',
-        image: '/background.jpg'
-      },
-      {
-        name: 'Two-2',
-        description: 'Ornare donec rhoncus vitae nisl velit, neque, mauris dictum duis. Nibh urna non parturient.',
-        image: '/background.jpg'
-      },
-      {
-        name: 'Three-3',
-        description: 'Tempor tellus in aliquet eu et sit nulla tellus. Suspendisse est, molestie blandit quis ac. Lacus.',
-        image: '/background.jpg'
-      },
-      {
-        name: 'Four-3',
-        description: 'Ornare donec rhoncus vitae nisl velit, neque, mauris dictum duis. Nibh urna non parturient.',
-        image: '/background.jpg'
-      },
-      {
-          name: 'One-3',
-          description: 'Tempor tellus in aliquet eu et sit nulla tellus. Suspendisse est, molestie blandit quis ac. Lacus.',
-          image: '/background.jpg'
-        },
-        {
-          name: 'Two-3',
-          description: 'Ornare donec rhoncus vitae nisl velit, neque, mauris dictum duis. Nibh urna non parturient.',
-          image: '/background.jpg'
-        },
-        {
-          name: 'Three-3',
-          description: 'Tempor tellus in aliquet eu et sit nulla tellus. Suspendisse est, molestie blandit quis ac. Lacus.',
-          image: '/background.jpg'
-        },
-        {
-          name: 'Four-3',
-          description: 'Ornare donec rhoncus vitae nisl velit, neque, mauris dictum duis. Nibh urna non parturient.',
-          image: '/background.jpg'
-        },
-]
-
-
 
 export default function MusicAndVideo(videoPreLink) {
-  const getUrl = videoPreLink.videoPreLink[0].url
+  console.log(videoPreLink)
+  const getUrl = videoPreLink.videoPreLink.heroLink[0].url
   const id = getYouTubeID(getUrl)
   const url = `https://www.youtube.com/embed/${id}`
   
@@ -160,19 +77,27 @@ return (
    />
       </div>
        
-       <div className="grid-container px-12 mt-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3">
-      
-          {features.map((feature) => (
-            <div className="">
-            <Image
-              src={feature.image}
+       <div className="w-screen grid-container px-12 mt-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-2">
+        
+          {videoPreLink.videoPreLink.vidLink.map(function(video) {
+            const getVid=video.url
+            const id2 = getYouTubeID(getVid)
+            const url2 = `https://www.youtube.com/embed/${id2}`
+            return (
+           
+            <iframe className=" w-full z-50"
+              src={url2}
               width={500}
               height={500}
               alt=""
+              allow="fullscreen"
             />
-            </div>
-
-          ))}
+          
+            )
+          })}
+          
+          
+          
          </div>
         </div>
         
