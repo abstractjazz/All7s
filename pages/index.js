@@ -40,12 +40,15 @@ export const getServerSideProps = async() => {
   const query3 = "*[_type == 'heroVideo']"
   const vidLink = await client.fetch(query2)
   const heroLink = await client.fetch(query3)
+  const query4 = "*[_type == 'musicLink']"
+  const musicLink = await client.fetch(query4)
   
   return {
    props: {
       clientFetch,
       vidLink,
-      heroLink
+      heroLink,
+      musicLink
       }
     }
   }
