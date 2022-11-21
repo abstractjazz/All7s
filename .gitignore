@@ -3,3 +3,9 @@ node_modules
 
 #environment
 .env
+
+#next-files
+.next
+
+#distribution 
+dist

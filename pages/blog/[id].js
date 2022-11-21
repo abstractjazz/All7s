@@ -93,38 +93,3 @@ export const getServerSideProps = async pageContext => {
 
 
 export default Details;
-
-// export const dataCheck = async () => {
-//   const res = await fetch('https://1gxdk71x.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type%20%3D%3D%20%22post%22%5D%0A')
-//     const data = await res.json()
-//     console.log(data)
-// }
-// dataCheck()
-
-// export const getStaticPaths = async () => {
-//   const res = await fetch('https://1gxdk71x.api.sanity.io/v2021-10-21/data/query/production?query={query}')
-//   const data = await res.json()
-//   console.log(data)
-//   // const paths = data.map(post=>{
-//   // //  return {
-//   // //   params: {id: post.title.split(" ").join("-")}
-//   // //  }
-//   // })
-  
-//   return {
-//     // paths,
-//     // fallback: false 
-//   }
-// }
-
-
-// export const getStaticProps = async (context) => {
-// const id = context.params.id;
-// const res = await fetch('https://1gxdk71x.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type%20%3D%3D%20%22post%22%5D%0A/' + id)
-// const data = await res.json()
-// return {
-//   props: {
-//    post: data 
-//     }
-//   }
-// }

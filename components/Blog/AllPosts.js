@@ -57,7 +57,7 @@ import Link from 'next/link'
       <div className="bg-black px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-24 lg:pb-28">
         <div className="relative mx-auto max-w-lg divide-y-2 divide-white lg:max-w-7xl">
           <div>
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">All7z Blog</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">ALL7z BLOG</h2>
             <div className="mt-3 sm:mt-4 lg:grid lg:grid-cols-2 lg:items-center lg:gap-5">
               <p className="text-xl text-gray-500"></p>
               <form className="mt-6 flex flex-col sm:flex-row lg:mt-0 lg:justify-end">
@@ -83,7 +83,7 @@ import Link from 'next/link'
                   <p className="text-xl font-semibold white">{post.title}</p>
                 </a>
                 <div className="mt-3">
-                  <Link href={'/blog/'+ post.title.split(" ").join("-")} key={post.id} className="text-base font-semibold text-indigo-600 hover:text-indigo-500">
+                  <Link href={'/blog/'+ post.title.split(" ").join("-").toLowerCase()} key={post.id} className="text-base font-semibold text-indigo-600 hover:text-indigo-500">
                     Read full story
                   </Link>
                 </div>

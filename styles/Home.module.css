@@ -1,5 +1,9 @@
 @import url("https://use.typekit.net/xiv3wpa.css");
 
+.nav {
+  cursor: url('../public/whiteRabbit.png'), auto;
+}
+
 .container {
   padding: 0 2rem;
 }

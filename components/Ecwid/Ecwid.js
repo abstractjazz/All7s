@@ -1,4 +1,4 @@
-import { ProductBrowser } from '@ecwid/nextjs-ecwid-plugin'
+import ProductBrowser from '@ecwid/nextjs-ecwid-plugin'
 import { useEffect } from 'react'
 /*
   This example requires some changes to your config:

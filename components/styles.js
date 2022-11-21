@@ -1,5 +1,10 @@
 export default {
-    container:[   
+    container:[ 
+    
+    ].join(' '),
+
+    nav: [
+    
     ].join(' ')
 }
 
