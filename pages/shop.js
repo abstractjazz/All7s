@@ -14,9 +14,9 @@ export default function Shop() {
       </div>
      
 
-      <ProductBrowser 
+      {/* <ProductBrowser 
       storeId="81732001"
-      />
+      /> */}
       </div>
 
     )
