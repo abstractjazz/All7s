@@ -33,7 +33,7 @@ useEffect(()=>{
     nav.addEventListener('mousemove', cursor)
     
     function cursor(e) {
-      nav.style.cursor="url(https://ik.imagekit.io/a9ltbtydo/stak-images/stak/images/white-rabbit-cursor.png), pointer"
+      nav.style.cursor="pointer"
     }
 //unbind eventlistener 
 },[])
