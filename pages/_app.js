@@ -2,7 +2,8 @@ import React from 'react'
 import '../styles/globals.css'
 import Head from 'next/head'
 import Layout from '../components/layout'
-
+import { StateContext } from '../context/StateContext'
+import { Toaster } from 'react-hot-toast'
 function MyApp({ Component, pageProps }) {
 
   return (
@@ -19,10 +20,15 @@ function MyApp({ Component, pageProps }) {
        <meta property="twitter:title" content="All 7z: Music, Lifestyle, Merch"/>
        <meta property="twitter:description" content="Explore the All 7z Brand. West Coast Music, Lifestyle, Merch"/>
       
+
   </Head>
+
+  <StateContext>
   <Layout>
+    <Toaster/>
       <Component {...pageProps} />
   </Layout>
+  </StateContext>
   </>
   )
 }

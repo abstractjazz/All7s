@@ -5,7 +5,7 @@ import HeroBanner from "../components/HeroBanner"
 import Product from "../components/Product"
 import FooterBanner from "../components/FooterBanner/FooterBanner"
 import { client } from "../lib/client"
-
+import { stateContext } from '../context/StateContext'
 
 // import  { ProductBrowser } from '@ecwid/nextjs-ecwid-plugin'
 // import dynamic from "next/dynamic"
@@ -13,7 +13,8 @@ import { client } from "../lib/client"
 // const ProductBrowserClient = dynamic(async () => (await import('@ecwid/nextjs-ecwid-plugin')).ProductBrowser, { ssr: false })
 
 const Shop = ({products, bannerData}) => (
-      <>
+      <div className="layout">
+        <div className="main-container">
       <HeroBanner heroBanner={bannerData.length && bannerData[0]}/>
 
         <div className="products-heading">
@@ -25,8 +26,10 @@ const Shop = ({products, bannerData}) => (
         
         </div>
         <FooterBanner footerBanner={bannerData && bannerData[0]}/>
-      </>
+        </div>
+      </div>
     )
+    
 
   export const getServerSideProps = async () => {
     const query = '*[_type == "product"]'
@@ -40,7 +43,8 @@ const Shop = ({products, bannerData}) => (
     }
   }
   
-    
+  
+
     {/* <ProductBrowser 
       storeId="81732001"
       /> */}
