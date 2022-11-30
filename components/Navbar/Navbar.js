@@ -3,9 +3,14 @@ import Headroom from "headroom.js"
 import headroom from 'headroom.js'
 import anime from 'animejs'
 import Link from 'next/link'
-
+import Cart from '../Cart'
+import { useStateContext }  from '../../context/StateContext'
+import { AiOutlineShopping } from 'react-icons/ai'
 
 const Navbar=()=>{
+    
+    const {showCart, setShowCart, totalQuantities} = useStateContext();
+
 useEffect(()=>{
     let lastScrollTop;
     let navbar = document.getElementById('nav');
@@ -43,22 +48,35 @@ return(
           <div className="flex flex-row justify-end gap-x-4 mb-8 mt-9">
           
           <Link href="/#about">
-          <h1>ABOUT ALL7z</h1>
+          <h1 className="font-Headline">LOOK</h1>
           </Link>
 
           <Link href="/#listen">
-          <h1>MUSIC & VIDEO</h1>
+          <h1 className="font-Headline">LISTEN</h1>
           </Link>
 
 
           <Link href="/shop">
-          <h1>SHOP</h1>
+          <h1 className="font-Headline">LEARN</h1>
           </Link>
 
 
           <Link href="/blog/posts">
-          <h1>BLOG</h1>
+          <h1 className="font-Headline">LOVE</h1>
           </Link>
+         
+          <Link href="/blog/posts">
+          <h1 className="text-[#1FE827] font-Headline">BUY</h1>
+          </Link>
+
+
+        <button type="button" className="cart-icon" onClick={() => setShowCart(true)}>
+            <span className="cart-item-qty">{totalQuantities}</span>
+            <span><AiOutlineShopping/></span>
+        </button>
+
+
+        {showCart && <Cart />}
 
 
           </div>
