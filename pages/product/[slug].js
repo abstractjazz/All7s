@@ -3,14 +3,20 @@ import {AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar} from 'react-ic
 import  Product  from '../../components/Product'
 import { useState } from 'react'
 import { useStateContext } from '../../context/StateContext'
+import Link from 'next/link'
 
 const ProductDetails = ({ product, products}) => {
     const {image, name, details, price } = product;
     const [index, setIndex] = useState(0)
     const { decQty, incQty, qty, onAdd } = useStateContext();
     return (
-        <div className = "layout">
-            <div className = "main-container">
+        <div>
+                <div className="z-50 ml-12 border border-[#1FE827] w-fit cursor-pointer text-[#1FE827]">
+                <Link href="/shop">
+                            <p>BACK TO SHOP</p>
+                        </Link>
+                </div>
+            <div className ="main-container z-10">
             <div className="product-detail-container">
                 <div>
                     <div className="image-container">
@@ -18,7 +24,7 @@ const ProductDetails = ({ product, products}) => {
                     </div>
                 </div>
             </div>
-            <div className="small-images-container">
+            <div className="small-images-container ml-10">
                 {image?.map((item, i) =>  (
                     <img src={urlFor(item) }
                          className={i === index ? 'small-image selected-image': 'small-image'}
@@ -27,9 +33,15 @@ const ProductDetails = ({ product, products}) => {
 
                 ))}
             </div>
-            <div className="product-detail-desc">
+
+                <div className="ml-10 mt-14 w-fit">
+                       
+            <div className="product-detail-desc ml-10 mt-1">
                 <h1>{name}</h1>
                 <div className="reviews flex-col">
+               
+                    </div>
+
                     {/* <div>
                        <AiFillStar />
                         <AiFillStar />
@@ -43,10 +55,11 @@ const ProductDetails = ({ product, products}) => {
                         (77)  
                     </p> */}
                     <h4>Details: </h4>
+                    
                     <p className="">{details}</p>
                     <p className="price">${price}</p>
                     <div className="quantity flex flex-col items-center">
-                        <h3 className=" mt-8 mb-3">Quantity</h3>
+                        <h3 className="mt-8 mb-3">Quantity</h3>
                         <p className="quanity-desc flex gap-x-3 ">
                             <span className="minus" onClick={decQty}><AiOutlineMinus/></span>
                             <span className="num">{qty}</span>
