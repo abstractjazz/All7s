@@ -67,8 +67,15 @@ export default function Splash() {
           width={2560}
           height={1600}
           objectFit="cover"
-        />
+          className="gradient"
+          />
         </div>
+
+        {/* <div className="w-full h-1/4 absolute -bottom-40 bg-gradient-to-b from-green-500/0 to-[#f1831b]">
+         
+          
+        </div> */}
+        
       </div>
   )
 }

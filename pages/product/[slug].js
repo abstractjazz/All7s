@@ -8,7 +8,10 @@ import Link from 'next/link'
 const ProductDetails = ({ product, products}) => {
     const {image, name, details, price } = product;
     const [index, setIndex] = useState(0)
-    const { decQty, incQty, qty, onAdd } = useStateContext();
+    const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
+
+
+
     return (
         <div>
                 <div className="z-50 ml-12 border border-[#1FE827] w-fit cursor-pointer text-[#1FE827]">
@@ -26,7 +29,9 @@ const ProductDetails = ({ product, products}) => {
             </div>
             <div className="small-images-container ml-10">
                 {image?.map((item, i) =>  (
-                    <img src={urlFor(item) }
+                    <img 
+                        key={i}
+                        src={urlFor(item) }
                          className={i === index ? 'small-image selected-image': 'small-image'}
                          onMouseEnter={()=>setIndex(i)}
                     />

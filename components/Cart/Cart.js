@@ -10,7 +10,7 @@ import { urlFor } from '../../lib/client';
 
 const Cart = () => {
 const cartRef = useRef();
-const { totalPrice, totalQuantities, cartItems, setShowCart } = useStateContext();
+const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuantity } = useStateContext();
 return(
 <div className="cart-wrapper" ref={cartRef}>
     <div className="cart-container">
@@ -19,7 +19,7 @@ return(
             className="cart-heading"
             onClick={()=>setShowCart(false)}>
              <AiOutlineLeft className="text-black text-2xl" />
-             <span className="heading text-black">Your Cart</span>
+             <span className="heading text-black">YOUR CART</span>
              <span className="cart-num-items">({ totalQuantities  } items)</span>
              
         </button>
@@ -39,34 +39,46 @@ return(
         <div className="product-container">
             {cartItems.length >= 1 && cartItems.map((item)=> (
                 <div className="product" key={item._id}>
-                <img src={urlFor(item?.image[0])}
-                className="cart-product-image mt-12"/>
-                  <div className="item-desc">
-                    <div className="flex flex-col">
-                        <h5>{item.name}</h5>
-                        <h4>${item.price}</h4>
-                    <div className="flex-col">
-                        <div>
-                            <p className="quantity-desc">
-                            <p className="flex flex-col">
-                            <span className="plus" onClick=""><AiOutlinePlus/></span>
-                            <span className="num">0</span>
-                            <span className="minus" onClick=""><AiOutlineMinus/></span>
-                            
-                            
-                        </p>
-                            </p>
+                    <img src={urlFor(item?.image[0])}
+                         className="cart-product-image mt-12"/>
+                    <div className="text-black">
+                        <div className="flex flex-col">
+                            <h5>{item.name}</h5>
+                            <h4 className="mb-5">${item.price}</h4>
+                            <div className="flex w-fit">
+                                <div>
+                                    <p className="w-fit">
+                                        <p className="flex items-center gap-x-5 border">
+                                            <span className="plus" onClick={()=>toggleCartItemQuantity(item._id, 'inc')}><AiOutlinePlus/></span>
+                                            <span className="num">{item.quantity}</span>
+                                            <span className="minus" onClick= {()=>toggleCartItemQuantity(item._id, 'dec')}><AiOutlineMinus/></span>
+                                        </p>
+                                    </p>
+                                </div>
+                                <button type="button"
+                                className="remove-item"
+                                onClick="">
+                                    <TiDeleteOutline className="ml-8"/>
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                    </div>
                   </div>
                 </div>
               
             ))}
 
         </div>
-
-
+        {cartItems.length >=1 && (
+        <div className="cart-bottom text-black">
+            <div className="total">
+            <h3>SUBTOTAL:</h3>
+            <h3>${totalPrice}</h3>
+            </div>
+            <div className="btn-container">
+                <button type="button" className="btn" onClick="">PAY WITH STRIPE</button>
+            </div>
+        </div>
+        )}
     </div>
 </div>
 

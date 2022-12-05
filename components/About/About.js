@@ -22,12 +22,14 @@ export default function About({sectionCopy}) {
       </div>
    
       <Image
-        alt="huge block letters 'S T A K' with an image of the rapper STAK inside of them"
+        alt="Two photos of the artist Stak on vintage film that looks like its burning"
         src="https://ik.imagekit.io/a9ltbtydo/stak-images/stak/images/Stak-about-page.png"
         layout="responsive"
         width={1440}
         height={900}
+        
       />
+
   </>
   )
 }
