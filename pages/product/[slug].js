@@ -4,12 +4,14 @@ import  Product  from '../../components/Product'
 import { useState } from 'react'
 import { useStateContext } from '../../context/StateContext'
 import Link from 'next/link'
+import toast from 'react-hot-toast'
 
 const ProductDetails = ({ product, products}) => {
     const {image, name, details, price } = product;
     const [index, setIndex] = useState(0)
-    const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
-
+    const { decQty, incQty, qty, onAdd, setShowCart, cartCheck, setCartCheck} = useStateContext();
+    const [clicked, setClicked] = useState(false);
+    const [cartItem, setCartItem] = useState([])
 
 
     return (
@@ -73,12 +75,22 @@ const ProductDetails = ({ product, products}) => {
                         <div className="buttons">
                             <button type="button"
                                     className="add-to-cart"
-                                    onClick={()=>onAdd(product, qty)}>Add to Cart
+                                    onClick={()=>{
+                                        console.log(cartCheck)
+                                        if (!cartCheck.includes(product._id)) {
+                                        setCartCheck([...cartCheck, product._id])
+                                        setClicked(true)
+                                        onAdd(product, qty) 
+                                        console.log(cartCheck)
+                                        } else {
+                                        toast.error('item already in cart')
+                                        }
+                                        }}>ADD TO CART
                             </button>
                             
                             <button type="button"
                                     className='buy-now' 
-                                    onClick="">Buy Now
+                                    onClick="">BUY NOW
                             </button>
                         </div>
                     </div>

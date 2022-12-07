@@ -10,7 +10,7 @@ import { urlFor } from '../../lib/client';
 
 const Cart = () => {
 const cartRef = useRef();
-const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuantity } = useStateContext();
+const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuantity, onRemove} = useStateContext();
 return(
 <div className="cart-wrapper" ref={cartRef}>
     <div className="cart-container">
@@ -18,12 +18,12 @@ return(
             type="button"
             className="cart-heading"
             onClick={()=>setShowCart(false)}>
-             <AiOutlineLeft className="text-black text-2xl" />
+             <AiOutlineLeft className="text-black text-2xl"/>
              <span className="heading text-black">YOUR CART</span>
              <span className="cart-num-items">({ totalQuantities  } items)</span>
              
         </button>
-        {cartItems.length < 1 && (
+        {cartItems?.length < 1 && (
             <div className="empty-cart">
                 <AiOutlineShopping size={150}/>
                 <h3 className="text-black">YOUR SHOPPING BAG IS EMPTY</h3>
@@ -37,7 +37,9 @@ return(
             </div>
         )}
         <div className="product-container">
-            {cartItems.length >= 1 && cartItems.map((item)=> (
+            {cartItems.length >= 1 && cartItems.map((item)=> {
+                
+                return (
                 <div className="product" key={item._id}>
                     <img src={urlFor(item?.image[0])}
                          className="cart-product-image mt-12"/>
@@ -49,23 +51,23 @@ return(
                                 <div>
                                     <p className="w-fit">
                                         <p className="flex items-center gap-x-5 border">
-                                            <span className="plus" onClick={()=>toggleCartItemQuantity(item._id, 'inc')}><AiOutlinePlus/></span>
+                                            <span className="plus" onClick={()=>toggleCartItemQuantity(item._id, 'dec')}><AiOutlineMinus/></span>
                                             <span className="num">{item.quantity}</span>
-                                            <span className="minus" onClick= {()=>toggleCartItemQuantity(item._id, 'dec')}><AiOutlineMinus/></span>
+                                            <span className="minus" onClick= {()=>toggleCartItemQuantity(item._id, 'inc')}><AiOutlinePlus/></span>
                                         </p>
                                     </p>
                                 </div>
                                 <button type="button"
                                 className="remove-item"
-                                onClick="">
+                                onClick={()=>onRemove(item)}>
                                     <TiDeleteOutline className="ml-8"/>
                                 </button>
                             </div>
                         </div>
                   </div>
                 </div>
-              
-            ))}
+                )
+            })}
 
         </div>
         {cartItems.length >=1 && (
