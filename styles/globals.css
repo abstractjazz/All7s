@@ -436,7 +436,7 @@ padding: 30px 65px;
   margin-top: 10px;
   margin-top: 40px;
   text-transform: uppercase;
-  background-color: #f02d34;
+  background-color: #a659f3;
   color: #fff;
   cursor: pointer;
     transform: scale(1, 1);
@@ -597,7 +597,7 @@ padding: 6px;
   color: #f02d34;
 }
 .success-wrapper, .cancel-wrapper{
-  background-color: white;
+  background-color: black;
   min-height: 60vh;
 
 }
@@ -605,7 +605,7 @@ padding: 6px;
   width: 1000px;
 margin: auto;
 margin-top: 160px;
-  background-color: #dcdcdc;
+  background-color: #006eb3;
   padding: 50px;
   border-radius: 15px;
   display: flex;
@@ -615,7 +615,7 @@ margin-top: 160px;
 }
 
 .success .icon {
-   color: green;
+   color: rgb(192, 0, 206);
    font-size: 40px;
 }
 .success h2{
