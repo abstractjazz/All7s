@@ -6,7 +6,7 @@ import Product from "../components/Product"
 import FooterBanner from "../components/FooterBanner/FooterBanner"
 import { client } from "../lib/client"
 import { stateContext } from '../context/StateContext'
-
+import Sketch from '../components/Sketch/'
 // import  { ProductBrowser } from '@ecwid/nextjs-ecwid-plugin'
 // import dynamic from "next/dynamic"
 
@@ -14,13 +14,14 @@ import { stateContext } from '../context/StateContext'
 
 const Shop = ({products, bannerData}) => (
       <div className="layout">
-        <div className="main-container">
-      <HeroBanner heroBanner={bannerData.length && bannerData[0]}/>
+      <div className="main-container">
 
+      <HeroBanner heroBanner={bannerData.length && bannerData[0]}/>
         <div className="products-heading">
-          <h2 className="mt-28">SHOP ALL7z</h2>
-        
+      
+          <h2 className="text-white">SHOP ALL7z</h2>
         </div>
+        
         <div className="products-container">
           {products?.map((product)=> <Product key={product._id} product={product}/>)}
         

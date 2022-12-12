@@ -6,9 +6,9 @@ import Link from 'next/link'
 import Cart from '../Cart'
 import { useStateContext }  from '../../context/StateContext'
 import { AiOutlineShopping } from 'react-icons/ai'
+import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
-const Navbar=()=>{
-    
+const Navbar=()=>{  
     const {showCart, setShowCart, totalQuantities} = useStateContext();
 
 useEffect(()=>{

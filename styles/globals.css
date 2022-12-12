@@ -159,13 +159,13 @@ width: 100%;
 }
 
 .hero-banner-container{
-  padding: 100px 40px;
-  background-color: #dcdcdc;
+  /* padding: 150px 100px 0px 100px;
+  background-color: #000000;
   border-radius: 15px;
   position: relative;
   height: 500px;
   line-height: 0.9; 
-  width: 100%;
+  width: 100%; */
 
 }
 .hero-banner-container .beats-solo{
