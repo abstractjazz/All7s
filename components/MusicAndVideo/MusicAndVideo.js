@@ -100,8 +100,22 @@ const handleClick=()=> {
   const id = getYouTubeID(getUrl)
   const url = `https://www.youtube.com/embed/${id}`
   
-  useEffect(()=>{
-   
+
+
+// useEffect(() => {
+//   if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+//     // true for mobile device
+//     document.write("mobile device");
+//   }else{
+//     // false for not mobile device
+//     document.write("not mobile device");
+//   }
+  
+// })
+
+   useEffect(()=>{
+   if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+
   const video = document.querySelector(".vid");
   let playState = null;
 
@@ -128,12 +142,12 @@ const onVisibilityChange = () => {
 };
 
 document.addEventListener("visibilitychange", onVisibilityChange);
-    })
+ } })
  
 return (
     <>
    
-    <video className="vid sticky top-0 w-screen h-screen z-10" src="https://ik.imagekit.io/a9ltbtydo/stak-images/stak/images/smoke-transition-bg.mp4" muted></video>
+   <video className="vid sticky top-0 w-screen h-screen z-10" src="https://ik.imagekit.io/a9ltbtydo/stak-images/stak/images/smoke-transition-bg.mp4" muted="true"></video>
     
        <div className="parallax-container flex flex-col items-center justify-center w-full h-full bg-green-200/0 z-10"> 
       

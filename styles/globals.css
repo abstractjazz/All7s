@@ -21,7 +21,6 @@ a {
     color-scheme: dark;
   }
   body {
-    color: white;
     background: black;
   }
 }
@@ -33,6 +32,7 @@ body, * {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   box-sizing: border-box;
+  
 
 }
 ::-webkit-scrollbar {
@@ -48,6 +48,7 @@ a {
 max-width: 1400px; 
 margin: auto;
 width: 100%;
+background: black;
 
 }
 .layout{

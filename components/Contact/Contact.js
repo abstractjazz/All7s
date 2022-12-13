@@ -1,26 +1,3 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  const colors = require('tailwindcss/colors')
-  
-  module.exports = {
-    // ...
-    theme: {
-      extend: {
-        colors: {
-          grape: colors.purple,
-        },
-      },
-    },
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -135,15 +112,15 @@ export default function Contact({info}) {
         <div className="relative bg-gray-900/50 mt-28">
           <div className="lg:absolute lg:inset-0">
             <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-            <div className="flex justify-center ">
-              <h1 className="mt-8 mb-8 font-Headline">
+            <div className="flex flex-col justify-center ">
+              <h1 className="mt-8 mb-8 font-Headline ml-8">
                 PREVIOUS COMMENTS
               </h1>
              
                {info.map((comment) => (
-                  
-                    <p>{comment.name}</p>
-                 
+                    <div className="sm: ml-8 mr-12">
+                   <span className="text-green-500">{comment.name}</span> from {comment.city}, {comment.state} said {comment.comment}<br/><br/>
+                    </div>
                 ))}
               
             </div>
@@ -231,8 +208,20 @@ export default function Contact({info}) {
 
                   
                   
-                  <div className="sm:col-span-2">
-                    
+                  <div className="flex  items-end">
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                      WANT TO HEAR MORE FROM US? SIGN UP FOR OUR NEWSLETTER.
+                    </label>
+                    <div className="mt-1">
+                     
+                    <input
+                        id="newsletter"
+                        name="newsletter"
+                        type="checkbox"
+                        autoComplete=""
+                        className="rounded-md border-gray-300 shadow-sm focus:border-grape-500 focus:ring-grape-500 "
+                      />
+                    </div>
                     
                   </div>
                   <div className="sm:col-span-2">
