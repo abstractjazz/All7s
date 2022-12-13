@@ -16,6 +16,7 @@ import videoLink from './videoLink'
 import heroVideo from './heroVideo'
 import product from './product'
 import banner from './banner'
+import comments from './comments'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -38,6 +39,7 @@ export default createSchema({
     videoLink,
     heroVideo,
     banner, 
-    product
+    product,
+    comments
   ]),
 })

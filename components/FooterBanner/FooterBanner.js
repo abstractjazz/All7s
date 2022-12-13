@@ -6,9 +6,9 @@ const FooterBanner = ({ footerBanner: {desc, discount, largeText1, largeText2, m
     const date = new Date();
     return  (
         <div className="flex justify-center mt-10">
-    <div className="w-3/4 bg-gradient-to-r from-blue-300 via-pink-600 to-purple-600 flex justify-center rounded-xl">
+    <div className="w-3/4 flex justify-center rounded-xl">
         <div className="banner-desc">
-            <div className="left">
+            <div className="font-Headline lg:text-7xl md:text-5xl sm:text-5xl">
                 {/* <p>{discount}</p> */}
                 <h3>{largeText1}</h3>
                 <h3>{largeText2}</h3>

@@ -18,6 +18,7 @@ const Home=(clientFetch) =>{
       {/* {console.log(JSON.stringify(aboutCopy.aboutCopy, null, 2))} */}
       <Splash/>
        <About sectionCopy={clientFetch.clientFetch}/>
+       
        <MusicAndVideo videoPreLink={clientFetch}/>
       {/* {console.log(clientFetch.vidLink)} */}
      

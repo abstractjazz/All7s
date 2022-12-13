@@ -13,11 +13,11 @@ import { AiOutlineShopping } from 'react-icons/ai'
 
 
 const navigation = [
-  { name: 'LOOK', href: '#', current: false },
-  { name: 'LISTEN', href: '#', current: false },
-  { name: 'LEARN', href: '#', current: false },
-  { name: 'LOVE', href: '#', current: false },
-  { name: 'BUY', href: '#', current: false },
+  { name: 'LOOK', href: '/#LOOK', current: false },
+  { name: 'LISTEN', href: '/#LISTEN', current: false },
+  { name: 'LEARN', href: '/blog/posts', current: false },
+  { name: 'LOVE', href: '/contact', current: false },
+  { name: 'BUY', href: '/shop', current: false },
 ]
 
 function classNames(...classes) {

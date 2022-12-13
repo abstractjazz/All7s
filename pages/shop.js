@@ -19,7 +19,7 @@ const Shop = ({products, bannerData}) => (
       <HeroBanner heroBanner={bannerData.length && bannerData[0]}/>
         <div className="products-heading">
       
-          <h2 className="text-white">SHOP ALL7z</h2>
+          <h2 className="text-white">SHOP ALL7Z</h2>
         </div>
         
         <div className="products-container">

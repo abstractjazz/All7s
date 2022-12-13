@@ -133,13 +133,13 @@ document.addEventListener("visibilitychange", onVisibilityChange);
 return (
     <>
    
-    <video className="vid sticky top-0 w-screen h-screen" src="https://ik.imagekit.io/a9ltbtydo/stak-images/stak/images/smoke-transition-bg.mp4" muted></video>
+    <video className="vid sticky top-0 w-screen h-screen z-10" src="https://ik.imagekit.io/a9ltbtydo/stak-images/stak/images/smoke-transition-bg.mp4" muted></video>
     
-       <div className="parallax-container flex flex-col items-center justify-center w-full h-full bg-green-200/0 z-2"> 
+       <div className="parallax-container flex flex-col items-center justify-center w-full h-full bg-green-200/0 z-10"> 
       
        <div className="z-30 flex flex-col items-center justify-center mb-20 w-screen">
         <div className="bg-black/50 mb-12 rounded-lg">
-       <p className="text-7xl font-Headline text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-pink-600 to-purple-600 font-bold">Watch</p>
+       <p className="text-7xl font-Headline text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-pink-600 to-purple-600 font-bold" id="LOOK">LOOK</p>
        </div>
        <iframe className="w-3/4 h-screen border-8 border-black/50"
   //  width='1032' 
@@ -180,7 +180,7 @@ return (
 
          <div className="w-3/4 flex mt-12 gap-y-12 flex-col items-center z-30">
          <div className="bg-black/50 mb-12 rounded-lg flex items-center justify-center w-1/2">
-       <p className="text-7xl font-Headline text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-pink-600 to-purple-600 font-bold" id="listen">Listen</p>
+       <p className="text-7xl font-Headline text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-pink-600 to-purple-600 font-bold" id="LISTEN">LISTEN</p>
        </div>
 
           {/* {useEffect(()=>{

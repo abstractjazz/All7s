@@ -7,12 +7,12 @@ import { AiOutlineShopping } from 'react-icons/ai'
 const HeroBanner = ({ heroBanner }) => {
   
 return(
-<div className="hero-banner-container">
+<div className="mt-28">
     
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center ">
         <p className="beats-solo font-Headline ml-0">{heroBanner.smallText}</p>
-        <h3 className="font-Headline">{heroBanner.midText}</h3>
-        <h1 className="font-Headline ml-5">{heroBanner.largeText1}</h1>
+        <h3 className="font-Headline md: text-5xl sm:text-2xl">{heroBanner.midText}</h3>
+        <h1 className="font-Headline md:text-8xl sm:text-5xl">{heroBanner.largeText1}</h1>
         {/* <img src={urlFor(heroBanner.image)} alt="ALL7Z PRODUCT" className="hero-banner-image mt-8 md:w-1/16 md:h-1/16" /> */}
         <div>
             {/* <Link href={`/product/${heroBanner.product}`}>
