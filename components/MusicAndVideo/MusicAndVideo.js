@@ -13,6 +13,7 @@ import { ChevronDoubleLeftIcon } from '@heroicons/react/24/outline'
 import anime from 'animejs'
 
 
+
 // const components = {
 //   types: {
 //     youtube: ({node}) => {
@@ -30,6 +31,7 @@ export default function MusicAndVideo(videoPreLink) {
 const soundCloudMusic = videoPreLink.videoPreLink.musicLink
 const albumRef = soundCloudMusic.map(function(album){console.log(album)})
 
+
 const [play, setPlay] = useState(<div className="text-9xl flex flex-col justify-center items-center">{soundCloudMusic.map(function(album){
 
 return ( 
@@ -39,8 +41,14 @@ return (
 {/* <Album content={album} isClicked="false"/> */}
 <p className="bg-black/50 rounded-lg text-2xl font-bold w-1/2 mb-3 bg-gradient-to-r from-blue-300/50 via-pink-600/50 to-purple-600/50">{album.description}</p>
 <div className="flex flex-col items-center drop-shadow-2xl">
-<img className= "transition-all ease-linear w-1/4 absolute z-10 mt-28 -translate-y-30 animate-bounce" src='./whiteRabbit.png'/>
-<img className="bg-black/20 z-30 mb-8 w-1/2 h-auto transition-all hover:border-red-400/50 hover:skew-x-12 hover:skew-y-12 hover:translate-x-60  border-black/50 border-8 rounded-lg ease-linear duration-500" src={urlFor(album.image)}/>
+{/* <img className="transition-all ease-linear duration-1000 w-1/2 absolute z-10 mt-28 hover:-translate-x-150 hover:animate-ping" src='./whiteRabbit.png' id="bunny"/> */}
+<img className="bg-black/20 z-30 mb-8 w-1/2 h-auto transition-all hover:border-red-400/50 hover:scale-75 border-black/50 border-8 rounded-lg ease-linear duration-500" id="album" src={urlFor(album.image)}/>
+
+
+
+
+
+
 
 </div>
 </div>
@@ -113,9 +121,8 @@ const handleClick=()=> {
   
 // })
 
-   useEffect(()=>{
-   if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-
+  useEffect(()=>{
+  if ((!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
   const video = document.querySelector(".vid");
   let playState = null;
 
@@ -142,12 +149,18 @@ const onVisibilityChange = () => {
 };
 
 document.addEventListener("visibilitychange", onVisibilityChange);
- } })
+}})
  
+useEffect(()=>{if (window.innerWidth < 768) {
+  setMobile(true)
+}},[])
+
+
+const [mobile, setMobile] = useState(false)
 return (
     <>
-   
-   <video className="vid sticky top-0 w-screen h-screen z-10" src="https://ik.imagekit.io/a9ltbtydo/stak-images/stak/images/smoke-transition-bg.mp4" muted="true"></video>
+  {!mobile ? <video className="vid sticky top-0 w-screen h-screen z-10" src="https://ik.imagekit.io/a9ltbtydo/stak-images/stak/images/smoke-transition-bg.mp4" muted="true"></video> : <img src="/stak-tape.png" className="mb-12"/>}
+  
     
        <div className="parallax-container flex flex-col items-center justify-center w-full h-full bg-green-200/0 z-10"> 
       

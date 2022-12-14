@@ -50,7 +50,7 @@ export default function Splash() {
   // style={{display:'flex', flexDirection:'column', alignItems: 'center', alignContent:'center'}}
 
   return (
-      <div className="w-full h-auto scroll-smooth">
+      <div className="w-screen h-auto scroll-smooth ">
         <Image
           alt="huge block letters 'S T A K' with an image of the rapper STAK inside of them"
           src="https://ik.imagekit.io/a9ltbtydo/stak-images/stak/images/Stak-main-feature-(25x16).png"

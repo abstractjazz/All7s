@@ -5,14 +5,23 @@ import HeroBanner from "../components/HeroBanner"
 import Product from "../components/Product"
 import FooterBanner from "../components/FooterBanner/FooterBanner"
 import { client } from "../lib/client"
-import { stateContext } from '../context/StateContext'
+// import { useStateContext } from '../../context/StateContext'
 import Sketch from '../components/Sketch/'
 // import  { ProductBrowser } from '@ecwid/nextjs-ecwid-plugin'
 // import dynamic from "next/dynamic"
 
 // const ProductBrowserClient = dynamic(async () => (await import('@ecwid/nextjs-ecwid-plugin')).ProductBrowser, { ssr: false })
+// const {mobile, setMobile } = useStateContext();
 
-const Shop = ({products, bannerData}) => (
+
+const Shop = ({products, bannerData}) => {
+  useEffect(() => {
+  if (window.innerWidth < 768) {
+    setMobile(true);
+  }
+}, []);
+return (
+
       <div className="layout">
       <div className="main-container">
 
@@ -29,7 +38,7 @@ const Shop = ({products, bannerData}) => (
         <FooterBanner footerBanner={bannerData && bannerData[0]}/>
         </div>
       </div>
-    )
+    )}
     
 
   export const getServerSideProps = async () => {

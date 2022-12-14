@@ -10,10 +10,15 @@ export const StateContext = ({ children }) => {
   const [totalQuantities, setTotalQuantities] = useState(0);
   const [qty, setQty] = useState(1);
   const [cartCheck, setCartCheck] = useState([])
-  
+  const [mobile, setMobile] = useState(false);
+
+
+
 
   let foundProduct;
   let index;
+
+  useEffect(() => {if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {setMobile(true)}}, [])
 
   const onAdd = (product, quantity) => {
     const checkProductInCart = cartItems.find((item) => {item?._id === product._id});
@@ -117,7 +122,9 @@ export const StateContext = ({ children }) => {
         setTotalPrice,
         setTotalQuantities,
         cartCheck,
-        setCartCheck
+        setCartCheck,
+        mobile,
+        setMobile,
       }}
     >
       {children}

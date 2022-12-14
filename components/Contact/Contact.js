@@ -1,8 +1,9 @@
-import { Fragment } from 'react'
+import { Fragment, useState } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/20/solid'
 import  Sketch  from '../Sketch'
+
 
 const navigation = [
   { name: 'Work', href: '#' },
@@ -101,6 +102,15 @@ const footerNavigation = {
 }
 
 export default function Contact({info}) {
+  const [first, setFirst] = useState('')
+  const [last, setLast] = useState('')
+  const [email, setEmail] = useState('')
+  const [city, setCity] = useState('')
+  const [state, setState] = useState('')
+  const [comment, setComment] = useState('')
+
+  
+  console.log('rerender')
   return (
     <div className="bg-white">
       
@@ -125,16 +135,19 @@ export default function Contact({info}) {
               
             </div>
               <div className="absolute top-0">
-             <Sketch classname="z-50"/>
+             <Sketch/>
              </div>
             </div>
           </div>
-          <div className="relative py-16 px-4 sm:py-24 sm:px-6 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:px-8 lg:py-32">
-            <div className="lg:pr-8">
+          <div className="relative py-16 px-4 sm:py-24 sm:px-6 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:px-8 lg:py-32"> 
+          {/* biggest container  */}
+            <div className="lg:pr-8 ">
+              {/* next smallest container */}
               <div className="mx-auto max-w-md sm:max-w-lg lg:mx-0">
-                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">TELL US WHY YOU LOVE US</h2>
+                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">TELL US WHY YOU LOVE US</h2>
+                 {/* next smaller container */}
                
-                <form action="#" method="POST" className="mt-9 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8" data-netlify="true">
+                <form action="#" method="POST" className="mt-9 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
                   <div>
                     <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
                       FIRST
@@ -144,12 +157,13 @@ export default function Contact({info}) {
                         type="text"
                         name="first-name"
                         id="first-name"
-                        autoComplete="given-name"
                         className="block w-full rounded-md border-gray-300 shadow-sm focus:border-grape-500 focus:ring-grape-500 sm:text-sm"
+                        defaultValue={first}
+                        onChange={(e) => setFirst(e.target.value)}
                       />
                     </div>
                   </div>
-                  <div>
+                  <div id="mario">
                     <label htmlFor="last-name" className="block text-sm font-medium text-gray-700">
                       LAST
                     </label>
@@ -160,6 +174,9 @@ export default function Contact({info}) {
                         id="last-name"
                         autoComplete="family-name"
                         className="block w-full rounded-md border-gray-300 shadow-sm focus:border-grape-500 focus:ring-grape-500 sm:text-sm"
+                        // defaultValue={''}
+                        defaultValue={last}
+                        onChange={(e) => setLast(e.target.value)}
                       />
                     </div>
                   </div>
@@ -174,6 +191,8 @@ export default function Contact({info}) {
                         type="email"
                         autoComplete="email"
                         className="block w-full rounded-md border-gray-300 shadow-sm focus:border-grape-500 focus:ring-grape-500 sm:text-sm"
+                        defaultValue={email}
+                        onChange={(e) => setEmail(e.target.value)}
                       />
                     </div>
                   </div>
@@ -186,8 +205,9 @@ export default function Contact({info}) {
                         type="text"
                         name="city"
                         id="city"
-                        autoComplete="city"
                         className="block w-full rounded-md border-gray-300 shadow-sm focus:border-grape-500 focus:ring-grape-500 sm:text-sm"
+                        defaultValue={city}
+                        onChange={(e) => setCity(e.target.value)}
                       />
                     </div>
                   </div>
@@ -202,19 +222,21 @@ export default function Contact({info}) {
                         id="state"
                         autoComplete="state"
                         className="block w-full rounded-md border-gray-300 shadow-sm focus:border-grape-500 focus:ring-grape-500 sm:text-sm"
+                        defaultValue={state}
+                        onChange={(e) => setState(e.target.value)}
                       />
                     </div>
                   </div>
 
                   
                   
-                  <div className="flex  items-end">
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                  <div className="flex items-end">
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                       WANT TO HEAR MORE FROM US? SIGN UP FOR OUR NEWSLETTER.
                     </label>
                     <div className="mt-1">
                      
-                    <input
+                      <input
                         id="newsletter"
                         name="newsletter"
                         type="checkbox"
@@ -222,8 +244,8 @@ export default function Contact({info}) {
                         className="rounded-md border-gray-300 shadow-sm focus:border-grape-500 focus:ring-grape-500 "
                       />
                     </div>
-                    
-                  </div>
+                  </div> 
+
                   <div className="sm:col-span-2">
                     <div className="flex justify-between">
                       <label htmlFor="how-can-we-help" className="block text-sm font-medium text-gray-700">
@@ -240,7 +262,8 @@ export default function Contact({info}) {
                         aria-describedby="how-can-we-help-description"
                         rows={4}
                         className="block w-full rounded-md border-gray-300 shadow-sm sm:text-sm"
-                        defaultValue={''}
+                        defaultValue={comment}
+                        onChange={(e) => setComment(e.target.value)}
                       />
                     </div>
                   </div>

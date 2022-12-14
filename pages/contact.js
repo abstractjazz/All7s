@@ -1,6 +1,7 @@
 import Contact from "../components/Contact"
 import { client } from '../lib/client'
 
+
 const ContactPage = ({commentFetch}) => {
     return(
 <Contact info={commentFetch}/>

@@ -27,8 +27,15 @@ function classNames(...classes) {
 export default function Navbar() {
 
     const {showCart, setShowCart, totalQuantities} = useStateContext();
+    const [mobile, setMobile] = useState(false)
     
+    useEffect(()=>{  if (window.innerWidth < 768){
+      setMobile(true)
+    }})
+  
+
     useEffect(()=>{
+      if (mobile) {
         let lastScrollTop;
         let navbar = document.getElementById('nav');
         window.addEventListener('scroll',function(){
@@ -48,17 +55,17 @@ export default function Navbar() {
         }
         lastScrollTop = scrollTop;
         });
-    },[])
+} },[])
     
-    useEffect(()=>{
-        const nav = document.getElementById('nav')
-        nav.addEventListener('mousemove', cursor)
+    // useEffect(()=>{
+    //     const nav = document.getElementById('nav')
+    //     nav.addEventListener('mousemove', cursor)
         
-        function cursor(e) {
-          nav.style.cursor="pointer"
-        }
-    //unbind eventlistener 
-    },[])
+    //     function cursor(e) {
+    //       nav.style.cursor="pointer"
+    //     }
+    // //unbind eventlistener 
+    // },[])
 
   return (
     <Disclosure as="nav" className="fixed top-0 w-screen h-auto px-12 z-50 font-Headline text-white" id="nav">

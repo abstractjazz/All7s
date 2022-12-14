@@ -1,7 +1,7 @@
 import {client, urlFor} from '../../lib/client'
 import {AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar} from 'react-icons/ai'
 import  Product  from '../../components/Product'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useStateContext } from '../../context/StateContext'
 import Link from 'next/link'
 import toast from 'react-hot-toast'
@@ -12,20 +12,26 @@ const ProductDetails = ({ product, products}) => {
     const { decQty, incQty, qty, onAdd, setShowCart, cartCheck, setCartCheck} = useStateContext();
     const [clicked, setClicked] = useState(false);
     const [cartItem, setCartItem] = useState([])
+    const [mobile, setMobile] = useState(false);
 
+    useEffect(() =>{
+        if(window.innerWidth < 768) {
+            setMobile(true);
+        }
+    })
 
     return (
         <div>
-                <div className="z-50 ml-12 border border-[#1FE827] w-fit cursor-pointer text-[#1FE827]">
-                <Link href="/shop">
+                <div className="z-50 ml-12 border border-black w-fit cursor-pointer text-[#1FE827] mb-12">
+                        {/* <Link href="/shop">
                             <p>BACK TO SHOP</p>
-                        </Link>
+                        </Link> */}
                 </div>
             <div className ="main-container z-10">
             <div className="product-detail-container">
                 <div>
                     <div className="image-container">
-                        <img src={urlFor(image && image [index])} alt="ALL7z Product" className="product-detail-image" width="300" height="300"></img>
+                        <img src={urlFor(image && image [index])} alt="ALL7z Product" className="product-detail-image h-auto" width="300" height="300"></img>
                     </div>
                 </div>
             </div>
@@ -88,20 +94,20 @@ const ProductDetails = ({ product, products}) => {
                                         }}>ADD TO CART
                             </button>
                             
-                            <button type="button"
+                            {/* <button type="button"
                                     className='buy-now' 
                                     onClick="">BUY NOW
-                            </button>
+                            </button> */}
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="maylike-products-wrapper flex flex-col items-center mt-12">
+           {!mobile && <div className="maylike-products-wrapper flex flex-col items-center mt-12">
                 <h2 className="bg-black">More to love</h2>
                 <div className="marquee ">
                     <div className="maylike-products-container track">{products.map((item)=><Product key={item._id} product={item}/>)}</div>
                 </div>
-            </div>
+            </div>}
             </div>
         </div>
        
