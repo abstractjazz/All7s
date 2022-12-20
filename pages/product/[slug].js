@@ -80,7 +80,7 @@ const ProductDetails = ({ product, products}) => {
                         </p>
                         <div className="buttons">
                             <button type="button"
-                                    className="add-to-cart"
+                                    className="border border-gray-700 bg-black bg-gray-500 rounded-md w-40 h-14"
                                     onClick={()=>{
                                         console.log(cartCheck)
                                         if (!cartCheck.includes(product._id)) {
