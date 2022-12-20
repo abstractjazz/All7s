@@ -9,8 +9,8 @@ function MyApp({ Component, pageProps }) {
   return (
   <>
   <Head>
-    <title>ALL 7z</title>
-    <link rel="icon" href="../public/white-rabbit-cursor.png" />
+    <title>ALL7Z</title>
+    {/* <link rel="icon" href="../public/white-rabbit-cursor.png" /> */}
        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
        <meta name="description" content="All 7z: Music, Lifestyle, Merch" />
        <meta name="robots" content="index, follow"/>

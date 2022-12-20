@@ -14,8 +14,6 @@ import styles from '../styles.js'
 import Image from 'next/image'
 
 
-
-
 export default function Splash() {
   
   useEffect(()=> {
@@ -58,6 +56,7 @@ export default function Splash() {
           width={2560}
           height={1600}
           objectFit='cover'
+          priority={true}
         />
         <div className="bg-black absolute top-5 w-screen h-screen opacity-40" id="focus-mask">
         <Image
@@ -68,6 +67,7 @@ export default function Splash() {
           height={1600}
           objectFit="cover"
           className="gradient"
+          priority={true}
           />
         </div>
 

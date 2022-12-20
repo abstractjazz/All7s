@@ -9,11 +9,11 @@ export default function About({sectionCopy}) {
   // {console.log(sectionCopy)}
   return (
   <>
-      <div className=" absolute w-screen h-screen z-20 lg:text-[6rem] text-[3rem]" id="about">
-        <div className="w-screen lg:h-screen flex content-center justify-center font-bold px-24 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-pink-600 to-purple-600 md:mt-24">
+      <div className=" absolute w-screen h-screen z-20 lg:text-[5.75rem] text-[3rem]" id="about">
+        <div className="w-screen lg:h-screen flex content-center justify-center px-24 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-pink-600 to-purple-600 md:mt-24">
         {/* <p className="bg-black/5">{sectionCopy[0].body[0].children[0].text}</p> */}
         {/* {console.log(doc)}  */}
-      <p>{sectionCopy[0].body[0].children[0].text}</p>
+      <p className="font-Headline font-bold">{sectionCopy[0].body[0].children[0].text}</p>
         {/* <PortableText value={sectionCopy[0].body[0].children[0].text}/>  */}
         {/* <PortableText value={sectionCopy}/>  */}
        

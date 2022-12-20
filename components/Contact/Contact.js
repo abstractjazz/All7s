@@ -144,7 +144,7 @@ export default function Contact({info}) {
             <div className="lg:pr-8 ">
               {/* next smallest container */}
               <div className="mx-auto max-w-md sm:max-w-lg lg:mx-0">
-                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">TELL US WHY YOU LOVE US</h2>
+                 <h2 className="text-3xl font-bold font-Headline tracking-tight sm:text-4xl">TELL US WHY YOU LOVE US</h2>
                  {/* next smaller container */}
                
                 <form action="#" method="POST" className="mt-9 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
@@ -232,7 +232,7 @@ export default function Contact({info}) {
                   
                   <div className="flex items-end">
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                      WANT TO HEAR MORE FROM US? SIGN UP FOR OUR NEWSLETTER.
+                     TUNE IN, TURN ON DROP US YOUR INFO! 
                     </label>
                     <div className="mt-1">
                      

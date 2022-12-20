@@ -101,7 +101,7 @@ return(
             <h3>${totalPrice}</h3>
             </div>
             <div className="btn-container">
-                <button type="button" className="btn" onClick={handleCheckout}>PAY WITH STRIPE</button>
+                <button type="button" className="btn" onClick={handleCheckout}>CHECKOUT</button>
             </div>
         </div>
         )}

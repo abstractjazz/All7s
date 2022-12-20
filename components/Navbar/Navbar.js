@@ -84,8 +84,8 @@ export default function Navbar() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                <div className="flex flex-shrink-0 items-center">
+              <div className="flex flex-1 sm:items-stretch sm:justify-start">
+                <div className="flex flex-shrink-0">
                   {/* <img
                     className="block h-8 w-auto lg:hidden"
                     src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
@@ -97,15 +97,15 @@ export default function Navbar() {
                     alt="Your Company"
                   /> */}
                 </div>
-                <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex space-x-4">
+                <div className="hidden sm:ml-6 sm:block flex">
+                  <div className="absolute right-[5rem] ">
                     {navigation.map((item) => (
                       <a
                         key={item.name}
                         href={item.href}
                         className={classNames(
                           item.name == 'BUY' ? 'text-green-400' : 'text-white hover:text-white',
-                          'px-3 py-2 rounded-md text-sm font-medium'
+                          'px-3 py-2 rounded-md text-sm font-medium font-Headline'
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >

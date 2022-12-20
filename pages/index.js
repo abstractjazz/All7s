@@ -9,6 +9,7 @@ import Contact from '../components/Contact'
 import MusicAndVideo from '../components/MusicAndVideo'
 import { client } from '../lib/client'
 import { PortableText } from '@portabletext/react'
+import Newsletter from '../components/Newsletter'
 
 const Home=(clientFetch) =>{
   {console.log(clientFetch)}
@@ -17,6 +18,7 @@ const Home=(clientFetch) =>{
     <div className={StylesObj.container}>
       {/* {console.log(JSON.stringify(aboutCopy.aboutCopy, null, 2))} */}
       <Splash/>
+      <Newsletter/>
        <About sectionCopy={clientFetch.clientFetch}/>
        
        <MusicAndVideo videoPreLink={clientFetch}/>
@@ -24,7 +26,7 @@ const Home=(clientFetch) =>{
      
       {/* <Featured/>
       <Contact/>  */}
-       {/* <h1>Landing | About | Highlights, like feature track, new release, news, new merch, etc...</h1>  */}
+       
     </div>
   ) 
 }

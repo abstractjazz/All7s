@@ -9,7 +9,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      'Headline': ['halyard-display', ...defaultTheme.fontFamily.sans],
+      'Headline': ['roc-grotesk-wide', ...defaultTheme.fontFamily.sans],
     },
   },
   variants:{

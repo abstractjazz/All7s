@@ -15,11 +15,12 @@ import Sketch from '../components/Sketch/'
 
 
 const Shop = ({products, bannerData}) => {
-  useEffect(() => {
-  if (window.innerWidth < 768) {
-    setMobile(true);
-  }
-}, []);
+//   useEffect(() => {
+//   if (window.innerWidth < 768) {
+//     setMobile(true);
+//   }
+// }, []);
+
 return (
 
       <div className="layout">
@@ -27,8 +28,8 @@ return (
 
       <HeroBanner heroBanner={bannerData.length && bannerData[0]}/>
         <div className="products-heading">
-      
-          <h2 className="text-white">SHOP ALL7Z</h2>
+        
+          <h2 className="text-white font-Headline">SHOP ALL7Z</h2>
         </div>
         
         <div className="products-container">
