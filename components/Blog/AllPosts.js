@@ -60,7 +60,7 @@ import Link from 'next/link'
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl font-Headline">ALL7Z BLOG</h2>
             <div className="mt-3 sm:mt-4 lg:grid lg:grid-cols-2 lg:items-center lg:gap-5">
               <p className="text-xl text-gray-500"></p>
-              <form className="mt-6 flex flex-col sm:flex-row lg:mt-0 lg:justify-end">
+              <form className="mt-6 flex flex-col sm:flex-row lg:mt-0 lg:justify-end" netlify>
                 <div>
                   <label htmlFor="email-address" className="sr-only">
                     Email address
