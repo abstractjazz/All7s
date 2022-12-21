@@ -26,10 +26,19 @@ import anime from 'animejs'
 
 export default function MusicAndVideo(videoPreLink) {
 const soundCloudMusic = videoPreLink.videoPreLink.musicLink
-const albumRef = soundCloudMusic.map(function(album){console.log(album)})
+const albumRef=soundCloudMusic.sort((a, b)=>a.order-b.order)
+console.log(albumRef)
+
+const [play, setPlay] = useState(<div className="text-9xl flex flex-col justify-center items-center">{albumRef.map(function(album){
+if (album.description === "ALLOW IT, BELIEVE IT (2022)"){album.order=1}
+if (album.description === "BIG STAK, BIG STAK OOOOHHH!!!!! (2021)"){album.order=2}
+if (album.description === "FOODSAVERS (2021)"){album.order=3}
+if (album.description === "24/7 (2021)"){album.order=4}
+if (album.description === "STAK ‘N EASY (2021)"){album.order=5}
+if (album.description === "TEDDY EP (2020)"){album.order=6}
+if (album.description === "777 (2016)"){album.order=7}
 
 
-const [play, setPlay] = useState(<div className="text-9xl flex flex-col justify-center items-center">{soundCloudMusic.map(function(album){
 
 return ( 
 <div className='album-div flex flex-col items-center justify-center' onClick={()=>{
@@ -94,7 +103,7 @@ const handleClick=()=> {
   </div>)
       }
  
-  console.log(soundCloudMusic) // map this and drill down into each object to get the iframe 
+  
   
   const getUrl = videoPreLink.videoPreLink.heroLink[0].url
   const id = getYouTubeID(getUrl)
