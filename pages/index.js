@@ -12,7 +12,7 @@ import { PortableText } from '@portabletext/react'
 import Newsletter from '../components/Newsletter'
 
 const Home=(clientFetch) =>{
-  {console.log(clientFetch)}
+
   return (
 
     <div className={StylesObj.container}>

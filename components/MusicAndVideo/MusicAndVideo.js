@@ -36,7 +36,7 @@ return (
  handleClick
 }}> 
 {/* <Album content={album} isClicked="false"/> */}
-<p className="rounded-lg text-2xl w-1/2 mb-3 font-Headline">{album.description}</p>
+<p className="rounded-lg text-2xl w-1/2 mb-3 font-Headline text-white">{album.description}</p>
 <div className="flex flex-col items-center drop-shadow-2xl">
 {/* <img className="transition-all ease-linear duration-1000 w-1/2 absolute z-10 mt-28 hover:-translate-x-150 hover:animate-ping" src='./whiteRabbit.png' id="bunny"/> */}
 <img className="bg-black/20 z-30 mb-8 w-1/2 h-auto transition-all hover:border-red-400/50 hover:scale-75 border-black/50 border-8 rounded-lg ease-linear duration-500" id="album" src={urlFor(album.image)}/>
@@ -216,18 +216,11 @@ return (
           {play}
          </div>
        
-         
-         
-         {/* <div className="stak-albums w-full" dangerouslySetInnerHTML={{__html:album.body[0].children[0].text}}></div>
-        musicDiv.innerHTML=album.body[0].children[0].text
-        console.log(musicDiv)
-          */}
-         
+
          </div>
         </div>
         
-        {/* <Video/> */}
-        {/* <Music/> */}
+       
     </>
 
     )

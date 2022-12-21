@@ -14,7 +14,7 @@
 */
 export default function Newsletter() {
     return (
-      <div className="bg-black">
+      <div className="bg-black h-max mb-28">
         <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:py-16 lg:px-8">
           <div className="lg:w-0 lg:flex-1">
             <h2 className="text-3xl font-bold font-Headline tracking-tight text-white sm:text-4xl" id="newsletter-headline">

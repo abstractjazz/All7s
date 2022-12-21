@@ -15,21 +15,30 @@ import Image from 'next/image'
 
 
 export default function Splash() {
+// const [mobile, setMobile] = useState(false)
   
-  useEffect(()=> {
-    window.scrollTo(95, 95)
-  })
+//   useEffect(()=>{
+//     if (window.innerWidth < 768){ setMobile(true)}
+//   },[])
+  
+//   if (!mobile){
+//   useEffect(()=> {
+//     window.scrollTo(95, 95)
+//   },[])
+// }
 
-  useEffect(()=> {
-    anime({
-      targets: '#focus-mask',
-      opacity: 0,
-      translateY: -120,
-      // translateX:-20,
-      duration: 1500,
-      easing: 'easeOutQuad'
-    })
-  })
+// if(!mobile){
+//   useEffect(()=> {
+//     anime({
+//       targets: '#splash-image',
+//       scale:[0,1],
+//       opacity:[0,1],
+//       duration: 1250,
+//       easing: 'easeOutQuad'
+//     })
+//   },[])
+// }
+
 
  
 
@@ -48,7 +57,7 @@ export default function Splash() {
   // style={{display:'flex', flexDirection:'column', alignItems: 'center', alignContent:'center'}}
 
   return (
-      <div className="w-screen h-auto scroll-smooth ">
+      <div className="w-screen h-auto scroll-smooth" id="splash-image">
         <Image
           alt="huge block letters 'S T A K' with an image of the rapper STAK inside of them"
           src="https://ik.imagekit.io/a9ltbtydo/stak-images/stak/images/Stak-main-feature-(25x16).png"
@@ -58,7 +67,9 @@ export default function Splash() {
           objectFit='cover'
           priority={true}
         />
-        <div className="bg-black absolute top-5 w-screen h-screen opacity-40" id="focus-mask">
+      
+      {/* { !mobile &&
+        <div className="bg-black absolute top-5 w-screen h-screen opacity-40 sm:bg-cover" id="focus-mask">
         <Image
           alt="huge block letters 'S T A K' with an image of the rapper STAK inside of them"
           src="https://ik.imagekit.io/a9ltbtydo/stak-images/stak/images/Stak-main-feature-(25x16).png"
@@ -70,7 +81,7 @@ export default function Splash() {
           priority={true}
           />
         </div>
-
+    } */}
         {/* <div className="w-full h-1/4 absolute -bottom-40 bg-gradient-to-b from-green-500/0 to-[#f1831b]">
          
           
