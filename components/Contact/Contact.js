@@ -155,7 +155,7 @@ export default function Contact({info}) {
                     <div className="mt-1">
                       <input
                         type="text"
-                        name="first-name"
+                        name="site-first-name"
                         id="first-name"
                         className="block w-full rounded-md border-gray-300 shadow-sm focus:border-grape-500 focus:ring-grape-500 sm:text-sm"
                         defaultValue={first}
@@ -170,7 +170,7 @@ export default function Contact({info}) {
                     <div className="mt-1">
                       <input
                         type="text"
-                        name="last-name"
+                        name="site-last-name"
                         id="last-name"
                         autoComplete="family-name"
                         className="block w-full rounded-md border-gray-300 shadow-sm focus:border-grape-500 focus:ring-grape-500 sm:text-sm"
@@ -187,7 +187,7 @@ export default function Contact({info}) {
                     <div className="mt-1">
                       <input
                         id="email"
-                        name="email"
+                        name="site-email"
                         type="email"
                         autoComplete="email"
                         className="block w-full rounded-md border-gray-300 shadow-sm focus:border-grape-500 focus:ring-grape-500 sm:text-sm"
@@ -203,7 +203,7 @@ export default function Contact({info}) {
                     <div className="mt-1">
                       <input
                         type="text"
-                        name="city"
+                        name="site-city"
                         id="city"
                         className="block w-full rounded-md border-gray-300 shadow-sm focus:border-grape-500 focus:ring-grape-500 sm:text-sm"
                         defaultValue={city}
@@ -218,7 +218,7 @@ export default function Contact({info}) {
                     <div className="mt-1">
                       <input
                         type="text"
-                        name="state"
+                        name="site-state"
                         id="state"
                         autoComplete="state"
                         className="block w-full rounded-md border-gray-300 shadow-sm focus:border-grape-500 focus:ring-grape-500 sm:text-sm"
@@ -238,7 +238,7 @@ export default function Contact({info}) {
                      
                       <input
                         id="newsletter"
-                        name="newsletter"
+                        name="agree-newsletter"
                         type="checkbox"
                         autoComplete=""
                         className="rounded-md border-gray-300 shadow-sm focus:border-grape-500 focus:ring-grape-500 "
