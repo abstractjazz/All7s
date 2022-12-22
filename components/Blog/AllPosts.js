@@ -58,9 +58,9 @@ import Link from 'next/link'
         <div className="relative mx-auto max-w-lg divide-y-2 divide-white lg:max-w-7xl">
           <div>
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl font-Headline">ALL7Z BLOG</h2>
-            <div className="mt-3 sm:mt-4 lg:grid lg:grid-cols-2 lg:items-center lg:gap-5">
-              <p className="text-xl text-gray-500"></p>
-              <form name="blog" method="POST" className="mt-6 flex flex-col sm:flex-row lg:mt-0 lg:justify-end" data-netlify="true">
+            {/* <div className="mt-3 sm:mt-4 lg:grid lg:grid-cols-2 lg:items-center lg:gap-5"> */}
+              {/* <p className="text-xl text-gray-500"></p> */}
+              {/* <form name="blog" method="POST" className="mt-6 flex flex-col sm:flex-row lg:mt-0 lg:justify-end" data-netlify="true">
                 <div>
                   <label htmlFor="email-address" className="sr-only">
                     Email address
@@ -70,8 +70,8 @@ import Link from 'next/link'
                 <div className="mt-2 flex w-full flex-shrink-0 rounded-md shadow-sm sm:mt-0 sm:ml-3 sm:inline-flex sm:w-auto">
                  
                 </div>
-              </form>
-            </div>
+              </form> */}
+            {/* </div> */}
           </div>
           <div className="mt-6 grid gap-16 pt-10 lg:grid-cols-2 lg:gap-x-5 lg:gap-y-12">
             {postInfo.map((post) => (
