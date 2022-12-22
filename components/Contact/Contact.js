@@ -111,7 +111,7 @@ export default function Contact({info}) {
 
   
   return (
-    <div className="bg-black">
+    <div className="bg-white">
       
       <main>
         {/* Header */}
