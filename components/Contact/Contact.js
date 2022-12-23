@@ -146,7 +146,7 @@ export default function Contact({info}) {
                  <h2 className="text-3xl font-bold font-Headline tracking-tight sm:text-4xl">TELL US WHY YOU LOVE US</h2>
                  {/* next smaller container */}
                
-                <form name="stak-contact" method="POST" className="mt-9 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8" data-netlify="true">
+                <form name="stak-contact" method="POST" className="mt-9 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8" netlify>
                 <input type="hidden" name="form-name" value="contact" />
                   <div>
                     <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
