@@ -25,10 +25,10 @@ export default function Newsletter() {
             </p>
           </div>
           <div className="mt-8 lg:mt-0 lg:ml-8">
-            <form name="newsletter" method="POST" className="sm:flex" data-netlify="true">
-              <label htmlFor="email-address" className="">
+            <form name="newsletter" method="POST" className="sm:flex" netlify>
+              {/* <label htmlFor="email-address" className="">
                 Email address
-              </label>
+              </label> */}
               <input
                 id="email-address"
                 name="email-address"
