@@ -252,7 +252,7 @@ export default function Contact({info}) {
                         aria-describedby="how-can-we-help-description"
                         rows={4}
                         className="block w-full rounded-md border-gray-300 shadow-sm sm:text-sm"
-                      />
+                      ></textarea>
                     </div>
                   </div>
                  
