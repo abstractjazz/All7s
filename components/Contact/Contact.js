@@ -158,7 +158,6 @@ export default function Contact({info}) {
                         name="site-first-name"
                         id="first-name"
                         className="block w-full rounded-md border-gray-300 shadow-sm focus:border-grape-500 focus:ring-grape-500 sm:text-sm"
-                        onChange={(e) => setFirst(e.target.value)}
                       />
                     </div>
                   </div>
@@ -173,8 +172,6 @@ export default function Contact({info}) {
                         id="last-name"
                         autoComplete="family-name"
                         className="block w-full rounded-md border-gray-300 shadow-sm focus:border-grape-500 focus:ring-grape-500 sm:text-sm"
-                        // defaultValue={''}
-                        onChange={(e) => setLast(e.target.value)}
                       />
                     </div>
                   </div>
@@ -189,7 +186,6 @@ export default function Contact({info}) {
                         type="email"
                         autoComplete="email"
                         className="block w-full rounded-md border-gray-300 shadow-sm focus:border-grape-500 focus:ring-grape-500 sm:text-sm"
-                        onChange={(e) => setEmail(e.target.value)}
                       />
                     </div>
                   </div>
@@ -203,7 +199,6 @@ export default function Contact({info}) {
                         name="site-city"
                         id="city"
                         className="block w-full rounded-md border-gray-300 shadow-sm focus:border-grape-500 focus:ring-grape-500 sm:text-sm"
-                        onChange={(e) => setCity(e.target.value)}
                       />
                     </div>
                   </div>
@@ -218,7 +213,6 @@ export default function Contact({info}) {
                         id="state"
                         autoComplete="state"
                         className="block w-full rounded-md border-gray-300 shadow-sm focus:border-grape-500 focus:ring-grape-500 sm:text-sm"
-                        onChange={(e) => setState(e.target.value)}
                       />
                     </div>
                   </div>
@@ -257,7 +251,6 @@ export default function Contact({info}) {
                         aria-describedby="how-can-we-help-description"
                         rows={4}
                         className="block w-full rounded-md border-gray-300 shadow-sm sm:text-sm"
-                        onChange={(e) => setComment(e.target.value)}
                       />
                     </div>
                   </div>
