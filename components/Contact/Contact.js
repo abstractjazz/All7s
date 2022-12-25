@@ -147,7 +147,8 @@ export default function Contact({info}) {
                  {/* next smaller container */}
                
                 <form name="stak-contact" method="POST" className="mt-9 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8" data-netlify="true">
-                
+                <input type="hidden" name="form-name" value="stak-contact" />
+
                   <div>
                     <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
                       FIRST
