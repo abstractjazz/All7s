@@ -28,7 +28,7 @@ const handleCheckout = async () => {
 
         const data = await response.json();
 
-        console.log('DATA', data.id);
+        console.log('DATA', data);
 
         toast.loading('Redirecting to checkout...');
 
