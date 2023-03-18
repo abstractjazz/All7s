@@ -66,6 +66,10 @@ export default function Splash() {
           height={1600}
           objectFit="contain"
           priority={true}
+          onError={(e) => {
+            e.target.src = ''
+          }
+        }
         />
       
       {/* { !mobile &&
