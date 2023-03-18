@@ -60,7 +60,7 @@ export default function Splash() {
       <div className="w-screen h-auto scroll-smooth bg-[url('https://ik.imagekit.io/a9ltbtydo/stak-images/stak/images/Stak-main-feature-(25x16).png')] bg-contain" id="splash-image">
         <Image
           // alt="huge block letters 'S T A K' with an image of the rapper STAK inside of them"
-          src=""
+          src="https://ik.imagekit.io/a9ltbtydo/stak-images/stak/images/Stak-main-feature-(25x16).png"
           layout='responsive'
           width={2560}
           height={1600}
